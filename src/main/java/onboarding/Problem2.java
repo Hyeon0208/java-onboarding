@@ -6,13 +6,11 @@ import java.util.regex.Pattern;
 
 public class Problem2 {
     public static String solution(String cryptogram) {
+        validate(cryptogram);
+
         String answer;
-        try {
-            validate(cryptogram);
-            answer = removeDuplicate(cryptogram);
-        } catch (IllegalArgumentException e) {
-            throw e;
-        }
+        answer = removeDuplicate(cryptogram);
+
         return answer;
     }
 
