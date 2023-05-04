@@ -14,6 +14,7 @@ public class Problem1 {
 
     public static int solution(List<Integer> pobi, List<Integer> crong) {
         int answer;
+
         try {
             validation(pobi);
             validation(crong);
