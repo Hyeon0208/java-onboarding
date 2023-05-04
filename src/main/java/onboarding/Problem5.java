@@ -13,7 +13,6 @@ public class Problem5 {
             answer.add(money / m);
             money = money % m;
         }
-
         return answer;
     }
 
