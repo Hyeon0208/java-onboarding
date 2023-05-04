@@ -1,5 +1,7 @@
 package onboarding;
 
+import java.util.Arrays;
+
 public class Problem3 {
     public static int solution(int number) {
         int answer = 0;
@@ -8,7 +10,7 @@ public class Problem3 {
         for (int i = 1; i <= number; i++) {
             String num = Integer.toString(i);
             if (isContain369(num)) {
-                answer++;
+                answer += countClab(num);
             }
         }
         return answer;
@@ -19,6 +21,11 @@ public class Problem3 {
             return true;
         }
         return false;
+    }
+
+    private static int countClab(String num) {
+        String[] arr = num.split("");
+        return (int) Arrays.stream(arr).filter(i -> i.equals("3") || i.equals("6") || i.equals("9")).count();
     }
 
     private static void validateNumberLen(int number) {
