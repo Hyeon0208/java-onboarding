@@ -19,7 +19,6 @@ public class Problem6 {
                 findUserEmail(forms, answer, subName);
             }
         }
-
         return answer.stream().sorted().collect(Collectors.toList());
     }
 
